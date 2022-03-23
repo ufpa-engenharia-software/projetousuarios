@@ -48,6 +48,8 @@ public class CacheConfiguration {
             createCache(cm, br.ufpa.bdii.domain.User.class.getName());
             createCache(cm, br.ufpa.bdii.domain.Authority.class.getName());
             createCache(cm, br.ufpa.bdii.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.ufpa.bdii.domain.Usuario.class.getName());
+            createCache(cm, br.ufpa.bdii.domain.Endereco.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

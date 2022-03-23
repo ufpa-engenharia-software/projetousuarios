@@ -1,0 +1,25 @@
+entity Usuario {
+    nome String
+    cpf String
+    dataNascimento LocalDate
+    criacao ZonedDateTime
+}
+entity Endereco{
+    cep String
+    logradouro String
+    complemento String
+    numero String
+    bairro String
+    cidade String
+    estado String
+    criacao ZonedDateTime
+}
+relationship ManyToOne{
+    Endereco{usuario} to Usuario
+}
+
+// Set pagination options
+paginate * with pagination
+dto * with mapstruct
+service all with serviceImpl
+filter *
