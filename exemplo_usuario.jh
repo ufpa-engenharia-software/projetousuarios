@@ -5,8 +5,8 @@ entity Usuario {
     criacao ZonedDateTime
 }
 entity Endereco{
-    cep String
-    logradouro String
+    cep String maxlength(20)
+    logradouro String maxlength(60)
     complemento String
     numero String
     bairro String
