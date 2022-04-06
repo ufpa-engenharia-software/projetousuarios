@@ -3,6 +3,7 @@ package br.ufpa.bdii.domain;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -22,10 +23,12 @@ public class Endereco implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "cep")
+    @Size(max = 20)
+    @Column(name = "cep", length = 20)
     private String cep;
 
-    @Column(name = "logradouro")
+    @Size(max = 60)
+    @Column(name = "logradouro", length = 60)
     private String logradouro;
 
     @Column(name = "complemento")

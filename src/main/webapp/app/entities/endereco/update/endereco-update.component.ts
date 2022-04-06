@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpResponse } from '@angular/common/http';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { finalize, map } from 'rxjs/operators';
@@ -24,8 +24,8 @@ export class EnderecoUpdateComponent implements OnInit {
 
   editForm = this.fb.group({
     id: [],
-    cep: [],
-    logradouro: [],
+    cep: [null, [Validators.maxLength(20)]],
+    logradouro: [null, [Validators.maxLength(60)]],
     complemento: [],
     numero: [],
     bairro: [],

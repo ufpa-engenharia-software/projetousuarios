@@ -14,10 +14,10 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="cep" type="varchar(255)">
+            <column name="cep" type="varchar(20)">
                 <constraints nullable="true" />
             </column>
-            <column name="logradouro" type="varchar(255)">
+            <column name="logradouro" type="varchar(60)">
                 <constraints nullable="true" />
             </column>
             <column name="complemento" type="varchar(255)">
