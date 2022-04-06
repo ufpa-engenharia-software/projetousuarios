@@ -16,6 +16,16 @@
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="projetousuariosApp.endereco.cep" for="field_cep">Cep</label>
           <input type="text" class="form-control" name="cep" id="field_cep" data-cy="cep" formControlName="cep" />
+          <div *ngIf="editForm.get('cep')!.invalid && (editForm.get('cep')!.dirty || editForm.get('cep')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('cep')?.errors?.maxlength"
+              jhiTranslate="entity.validation.maxlength"
+              [translateValues]="{ max: 20 }"
+            >
+              This field cannot be longer than 20 characters.
+            </small>
+          </div>
         </div>
 
         <div class="row mb-3">
@@ -28,6 +38,16 @@
             data-cy="logradouro"
             formControlName="logradouro"
           />
+          <div *ngIf="editForm.get('logradouro')!.invalid && (editForm.get('logradouro')!.dirty || editForm.get('logradouro')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('logradouro')?.errors?.maxlength"
+              jhiTranslate="entity.validation.maxlength"
+              [translateValues]="{ max: 60 }"
+            >
+              This field cannot be longer than 60 characters.
+            </small>
+          </div>
         </div>
 
         <div class="row mb-3">

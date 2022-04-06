@@ -3,6 +3,7 @@ package br.ufpa.bdii.service.dto;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.Objects;
+import javax.validation.constraints.*;
 
 /**
  * A DTO for the {@link br.ufpa.bdii.domain.Endereco} entity.
@@ -11,8 +12,10 @@ public class EnderecoDTO implements Serializable {
 
     private Long id;
 
+    @Size(max = 20)
     private String cep;
 
+    @Size(max = 60)
     private String logradouro;
 
     private String complemento;

@@ -7,11 +7,15 @@
   "fields": [
     {
       "fieldName": "cep",
-      "fieldType": "String"
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "20"
     },
     {
       "fieldName": "logradouro",
-      "fieldType": "String"
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "60"
     },
     {
       "fieldName": "complemento",
