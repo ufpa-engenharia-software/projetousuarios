@@ -10,6 +10,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 /**
  * A Endereco.
  * Comentário em Endereco
+ * Nov de nvo
  */
 @Entity
 @Table(name = "endereco")
@@ -185,7 +186,8 @@ public class Endereco implements Serializable {
         return this;
     }
 
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
+    // setters here
 
     @Override
     public boolean equals(Object o) {
@@ -200,7 +202,8 @@ public class Endereco implements Serializable {
 
     @Override
     public int hashCode() {
-        // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
+        // see
+        // https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
         return getClass().hashCode();
     }
 
@@ -208,15 +211,15 @@ public class Endereco implements Serializable {
     @Override
     public String toString() {
         return "Endereco{" +
-            "id=" + getId() +
-            ", cep='" + getCep() + "'" +
-            ", logradouro='" + getLogradouro() + "'" +
-            ", complemento='" + getComplemento() + "'" +
-            ", numero='" + getNumero() + "'" +
-            ", bairro='" + getBairro() + "'" +
-            ", cidade='" + getCidade() + "'" +
-            ", estado='" + getEstado() + "'" +
-            ", criacao='" + getCriacao() + "'" +
-            "}";
+                "id=" + getId() +
+                ", cep='" + getCep() + "'" +
+                ", logradouro='" + getLogradouro() + "'" +
+                ", complemento='" + getComplemento() + "'" +
+                ", numero='" + getNumero() + "'" +
+                ", bairro='" + getBairro() + "'" +
+                ", cidade='" + getCidade() + "'" +
+                ", estado='" + getEstado() + "'" +
+                ", criacao='" + getCriacao() + "'" +
+                "}";
     }
 }
