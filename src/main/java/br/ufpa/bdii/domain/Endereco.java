@@ -9,6 +9,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
  * A Endereco.
+ * Comentário em Endereco
  */
 @Entity
 @Table(name = "endereco")

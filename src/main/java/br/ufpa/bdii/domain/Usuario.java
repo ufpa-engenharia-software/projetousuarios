@@ -9,6 +9,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
  * A Usuario.
+    Novo Comentário na classe
  */
 @Entity
 @Table(name = "usuario")
