@@ -4,6 +4,9 @@ entity Usuario {
     dataNascimento LocalDate
     criacao ZonedDateTime
 }
+
+//comentario novo neste arquivo
+
 entity Endereco{
     cep String maxlength(20)
     logradouro String maxlength(60)
@@ -17,7 +20,7 @@ entity Endereco{
 relationship ManyToOne{
     Endereco{usuario} to Usuario
 }
-
+//nova alteracaop
 // Set pagination options
 paginate * with pagination
 dto * with mapstruct
